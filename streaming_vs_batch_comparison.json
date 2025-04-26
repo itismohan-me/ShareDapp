@@ -1,0 +1,17 @@
+{
+    "timestamp": "2025-04-21 17:36:40",
+    "streaming": {
+        "total_records": 891,
+        "top_hashtag": "fitness",
+        "window_count": 3
+    },
+    "batch": {
+        "total_records": 783,
+        "top_hashtag": "spark",
+        "execution_time": 3.5332698822021484
+    },
+    "comparison": {
+        "same_record_count": false,
+        "same_top_hashtag": false
+    }
+}

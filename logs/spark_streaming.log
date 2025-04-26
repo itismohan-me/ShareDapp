@@ -1,0 +1,874 @@
+25/04/22 11:58:22 WARN Utils: Your hostname, Mohans-MacBook-Air-2.local resolves to a loopback address: 127.0.0.1; using 10.30.203.16 instead (on interface en0)
+25/04/22 11:58:22 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/mohan/.ivy2/cache
+The jars for the packages stored in: /Users/mohan/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+mysql#mysql-connector-java added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-7e899085-8fcb-4f32-b12e-1985d88ff4c4;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.3.2 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.3.2 in central
+	found org.apache.kafka#kafka-clients;2.8.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.8.4 in central
+	found org.slf4j#slf4j-api;1.7.32 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.2 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.2 in central
+	found commons-logging#commons-logging;1.1.3 in local-m2-cache
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+	found mysql#mysql-connector-java;8.0.28 in central
+	found com.google.protobuf#protobuf-java;3.11.4 in central
+:: resolution report :: resolve 244ms :: artifacts dl 7ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	com.google.protobuf#protobuf-java;3.11.4 from central in [default]
+	commons-logging#commons-logging;1.1.3 from local-m2-cache in [default]
+	mysql#mysql-connector-java;8.0.28 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.2 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.2 from central in [default]
+	org.apache.kafka#kafka-clients;2.8.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.3.2 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.3.2 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.32 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.8.4 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   14  |   0   |   0   |   0   ||   14  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-7e899085-8fcb-4f32-b12e-1985d88ff4c4
+	confs: [default]
+	0 artifacts copied, 14 already retrieved (0kB/5ms)
+25/04/22 11:58:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/04/22 11:58:25 INFO SparkContext: Running Spark version 3.5.5
+25/04/22 11:58:25 INFO SparkContext: OS info Mac OS X, 15.4.1, aarch64
+25/04/22 11:58:25 INFO SparkContext: Java version 21.0.2
+25/04/22 11:58:25 INFO ResourceUtils: ==============================================================
+25/04/22 11:58:25 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/04/22 11:58:25 INFO ResourceUtils: ==============================================================
+25/04/22 11:58:25 INFO SparkContext: Submitted application: RealTimeHashtagTrendAnalysis
+25/04/22 11:58:25 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/04/22 11:58:25 INFO ResourceProfile: Limiting resource is cpu
+25/04/22 11:58:25 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/04/22 11:58:25 INFO SecurityManager: Changing view acls to: mohan
+25/04/22 11:58:25 INFO SecurityManager: Changing modify acls to: mohan
+25/04/22 11:58:25 INFO SecurityManager: Changing view acls groups to: 
+25/04/22 11:58:25 INFO SecurityManager: Changing modify acls groups to: 
+25/04/22 11:58:25 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: mohan; groups with view permissions: EMPTY; users with modify permissions: mohan; groups with modify permissions: EMPTY
+25/04/22 11:58:25 INFO Utils: Successfully started service 'sparkDriver' on port 59472.
+25/04/22 11:58:25 INFO SparkEnv: Registering MapOutputTracker
+25/04/22 11:58:25 INFO SparkEnv: Registering BlockManagerMaster
+25/04/22 11:58:25 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/04/22 11:58:25 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/04/22 11:58:25 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/04/22 11:58:25 INFO DiskBlockManager: Created local directory at /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/blockmgr-d84bbb0a-f3ec-497b-a572-a771deb5b69e
+25/04/22 11:58:25 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/04/22 11:58:25 INFO SparkEnv: Registering OutputCommitCoordinator
+25/04/22 11:58:25 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/04/22 11:58:25 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar at spark://10.30.203.16:59472/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/mysql_mysql-connector-java-8.0.28.jar at spark://10.30.203.16:59472/jars/mysql_mysql-connector-java-8.0.28.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar at spark://10.30.203.16:59472/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar at spark://10.30.203.16:59472/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://10.30.203.16:59472/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://10.30.203.16:59472/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://10.30.203.16:59472/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar at spark://10.30.203.16:59472/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://10.30.203.16:59472/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at spark://10.30.203.16:59472/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar at spark://10.30.203.16:59472/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar at spark://10.30.203.16:59472/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://10.30.203.16:59472/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added JAR file:///Users/mohan/.ivy2/jars/com.google.protobuf_protobuf-java-3.11.4.jar at spark://10.30.203.16:59472/jars/com.google.protobuf_protobuf-java-3.11.4.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar at file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/mysql_mysql-connector-java-8.0.28.jar at file:///Users/mohan/.ivy2/jars/mysql_mysql-connector-java-8.0.28.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/mysql_mysql-connector-java-8.0.28.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/mysql_mysql-connector-java-8.0.28.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar at file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar at file:///Users/mohan/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.kafka_kafka-clients-2.8.1.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///Users/mohan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.code.findbugs_jsr305-3.0.0.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///Users/mohan/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.commons_commons-pool2-2.11.1.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///Users/mohan/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.spark-project.spark_unused-1.0.0.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar at file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///Users/mohan/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.lz4_lz4-java-1.8.0.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at file:///Users/mohan/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.xerial.snappy_snappy-java-1.1.8.4.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar at file:///Users/mohan/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.slf4j_slf4j-api-1.7.32.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar at file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-api-3.3.2.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///Users/mohan/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/commons-logging_commons-logging-1.1.3.jar
+25/04/22 11:58:25 INFO SparkContext: Added file file:///Users/mohan/.ivy2/jars/com.google.protobuf_protobuf-java-3.11.4.jar at file:///Users/mohan/.ivy2/jars/com.google.protobuf_protobuf-java-3.11.4.jar with timestamp 1745303305523
+25/04/22 11:58:25 INFO Utils: Copying /Users/mohan/.ivy2/jars/com.google.protobuf_protobuf-java-3.11.4.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.protobuf_protobuf-java-3.11.4.jar
+25/04/22 11:58:25 INFO Executor: Starting executor ID driver on host 10.30.203.16
+25/04/22 11:58:25 INFO Executor: OS info Mac OS X, 15.4.1, aarch64
+25/04/22 11:58:25 INFO Executor: Java version 21.0.2
+25/04/22 11:58:26 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/04/22 11:58:26 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@41884097 for default.
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.xerial.snappy_snappy-java-1.1.8.4.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/com.google.protobuf_protobuf-java-3.11.4.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/com.google.protobuf_protobuf-java-3.11.4.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.protobuf_protobuf-java-3.11.4.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.spark-project.spark_unused-1.0.0.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.commons_commons-pool2-2.11.1.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/mysql_mysql-connector-java-8.0.28.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/mysql_mysql-connector-java-8.0.28.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/mysql_mysql-connector-java-8.0.28.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.code.findbugs_jsr305-3.0.0.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/commons-logging_commons-logging-1.1.3.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-api-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.lz4_lz4-java-1.8.0.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.1.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.kafka_kafka-clients-2.8.1.jar
+25/04/22 11:58:26 INFO Executor: Fetching file:///Users/mohan/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: /Users/mohan/.ivy2/jars/org.slf4j_slf4j-api-1.7.32.jar has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.slf4j_slf4j-api-1.7.32.jar
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/mysql_mysql-connector-java-8.0.28.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO TransportClientFactory: Successfully created connection to /10.30.203.16:59472 after 11 ms (0 ms spent in bootstraps)
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/mysql_mysql-connector-java-8.0.28.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp5204528012275168566.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp5204528012275168566.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/mysql_mysql-connector-java-8.0.28.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/mysql_mysql-connector-java-8.0.28.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.apache.hadoop_hadoop-client-api-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp17410210571888779646.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp17410210571888779646.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-api-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-api-3.3.2.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.spark-project.spark_unused-1.0.0.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp14244575748732115421.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp14244575748732115421.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.spark-project.spark_unused-1.0.0.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.spark-project.spark_unused-1.0.0.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/com.google.protobuf_protobuf-java-3.11.4.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/com.google.protobuf_protobuf-java-3.11.4.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp990977079794457787.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp990977079794457787.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.protobuf_protobuf-java-3.11.4.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.protobuf_protobuf-java-3.11.4.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp2856146098451538281.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp2856146098451538281.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-sql-kafka-0-10_2.12-3.3.2.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp1195439181729520452.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp1195439181729520452.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.3.2.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp14365401136845125888.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp14365401136845125888.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.hadoop_hadoop-client-runtime-3.3.2.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.apache.commons_commons-pool2-2.11.1.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp8305655533613686643.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp8305655533613686643.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.commons_commons-pool2-2.11.1.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/commons-logging_commons-logging-1.1.3.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp13095047373451312755.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp13095047373451312755.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/commons-logging_commons-logging-1.1.3.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/commons-logging_commons-logging-1.1.3.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp7996445623505101586.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp7996445623505101586.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.xerial.snappy_snappy-java-1.1.8.4.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.xerial.snappy_snappy-java-1.1.8.4.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.apache.kafka_kafka-clients-2.8.1.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.apache.kafka_kafka-clients-2.8.1.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp35475843933295023.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp35475843933295023.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.kafka_kafka-clients-2.8.1.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.apache.kafka_kafka-clients-2.8.1.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp1826104826502647839.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp1826104826502647839.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.code.findbugs_jsr305-3.0.0.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.slf4j_slf4j-api-1.7.32.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.slf4j_slf4j-api-1.7.32.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp6561262412578809579.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp6561262412578809579.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.slf4j_slf4j-api-1.7.32.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.slf4j_slf4j-api-1.7.32.jar to class loader default
+25/04/22 11:58:26 INFO Executor: Fetching spark://10.30.203.16:59472/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1745303305523
+25/04/22 11:58:26 INFO Utils: Fetching spark://10.30.203.16:59472/jars/org.lz4_lz4-java-1.8.0.jar to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp10702919599319910276.tmp
+25/04/22 11:58:26 INFO Utils: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/fetchFileTemp10702919599319910276.tmp has been previously copied to /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.lz4_lz4-java-1.8.0.jar
+25/04/22 11:58:26 INFO Executor: Adding file:/private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/spark-e3e50ea5-b593-426f-bfcf-f3018a79ed1a/userFiles-3a0a5831-ebb8-4162-acf4-58c31de91733/org.lz4_lz4-java-1.8.0.jar to class loader default
+25/04/22 11:58:26 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59481.
+25/04/22 11:58:26 INFO NettyBlockTransferService: Server created on 10.30.203.16:59481
+25/04/22 11:58:26 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/04/22 11:58:26 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.30.203.16, 59481, None)
+25/04/22 11:58:26 INFO BlockManagerMasterEndpoint: Registering block manager 10.30.203.16:59481 with 434.4 MiB RAM, BlockManagerId(driver, 10.30.203.16, 59481, None)
+25/04/22 11:58:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.30.203.16, 59481, None)
+25/04/22 11:58:26 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.30.203.16, 59481, None)
+25/04/22 11:58:27 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/temporary-16f3162f-8941-435e-b9bf-18fe84673cf6. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+25/04/22 11:58:27 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+25/04/22 11:58:27 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /private/var/folders/c_/mj1k6bxx495067k306984dsm0000gn/T/temporary-7f390b59-10c4-437b-a1b8-79b0ec58abed. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+25/04/22 11:58:27 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/04/22 11:58:27 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++-------+---------+-------+--------+--------+-----+--------+
+|user_id|timestamp|content|hashtags|location|likes|retweets|
++-------+---------+-------+--------+--------+-----+--------+
++-------+---------+-------+--------+--------+-----+--------+
+
+25/04/22 11:58:29 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+25/04/22 11:58:42 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user78|2025-04-22 11:58:28|Breaking news abo...|[bigdata, cloud, ...|      Seattle|  862|     272|
+| user24|2025-04-22 11:58:28|Amazing developme...|         [analytics]|       Denver|  303|     139|
+| user81|2025-04-22 11:58:28|Interesting persp...|       [environment]|       Austin|   91|      13|
+|  user5|2025-04-22 11:58:29|Amazing developme...|[news, travel, da...|San Francisco|    4|     146|
+| user17|2025-04-22 11:58:29|Learning more abo...|[environment, big...|     New York|  645|     220|
+| user71|2025-04-22 11:58:29|Learning more abo...|[analytics, trave...|       Boston|  281|      46|
+| user97|2025-04-22 11:58:30|Everyone should k...|[datascience, fit...|      Seattle|  183|     271|
+| user46|2025-04-22 11:58:30|Everyone should k...|             [kafka]|Washington DC|  297|     169|
+| user86|2025-04-22 11:58:30|Breaking news abo...|[environment, tre...|      Chicago|  540|     228|
+| user51|2025-04-22 11:58:31|Breaking news abo...|[food, spark, spo...|       Austin|  796|      41|
+| user74|2025-04-22 11:58:31|Learning more abo...|             [cloud]|     New York|    4|     261|
+| user55|2025-04-22 11:58:31|Here's my take on...|                [ML]|        Miami|  302|      36|
+| user48|2025-04-22 11:58:32|What do you think...|     [analytics, ML]|Washington DC|  153|      22|
+|  user1|2025-04-22 11:58:32|What do you think...|        [java, tech]|Washington DC|  941|     110|
+| user84|2025-04-22 11:58:32|Here's my take on...|        [movies, AI]|       Austin|  353|     190|
+| user79|2025-04-22 11:58:32|Just shared my th...|[fitness, analyti...|       Austin|  340|     275|
+| user34|2025-04-22 11:58:32|Excited to explor...|[AI, food, trendi...|        Miami|  786|      91|
+| user43|2025-04-22 11:58:33|Here's my take on...|[analytics, sport...|       Boston|  663|      99|
+| user80|2025-04-22 11:58:33|What do you think...|      [movies, food]|        Miami|  871|     197|
+| user71|2025-04-22 11:58:33|Can't believe wha...|           [fashion]|Washington DC|  949|      26|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user61|2025-04-22 11:59:00|Breaking news abo...|[environment, spo...|  Los Angeles|  779|     221|
+|  user2|2025-04-22 11:59:00|Everyone should k...|  [ML, health, java]|San Francisco|   27|      95|
+| user64|2025-04-22 11:59:00|Here's my take on...|[java, sports, mu...|     New York|  430|     241|
+| user52|2025-04-22 11:59:01|Interesting persp...|[food, streaming,...|      Seattle|  922|     241|
+| user87|2025-04-22 11:59:01|Excited to explor...|[tech, movies, ka...|     New York|  552|     177|
+| user68|2025-04-22 11:59:01|Can't believe wha...|            [python]|       Denver|  401|      48|
+| user73|2025-04-22 11:59:02|Learning more abo...|[datascience, big...|Washington DC|  170|     149|
+| user37|2025-04-22 11:59:02|Excited to explor...|       [spark, tech]|      Seattle|  787|     178|
+| user36|2025-04-22 11:59:02|Breaking news abo...|[environment, ML,...|        Miami|  110|      71|
+| user83|2025-04-22 11:59:03|Learning more abo...|[analytics, food,...|San Francisco|   49|     159|
+| user54|2025-04-22 11:59:03|Everyone should k...|[streaming, progr...|       Austin|  911|     243|
+| user50|2025-04-22 11:59:04|Breaking news abo...|        [AI, health]|      Seattle|  159|     277|
+| user60|2025-04-22 11:59:04|Interesting persp...|         [analytics]|Washington DC|   47|     291|
+| user86|2025-04-22 11:59:04|Learning more abo...|[movies, bigdata,...|  Los Angeles|  608|     273|
+| user57|2025-04-22 11:59:05|Learning more abo...|[science, java, f...|      Seattle|  780|     139|
+| user82|2025-04-22 11:59:05|What do you think...|[movies, java, sc...|  Los Angeles|  778|     282|
+| user67|2025-04-22 11:59:05|What do you think...|           [science]|      Chicago|  350|      47|
+| user42|2025-04-22 11:59:06|Breaking news abo...|[movies, sports, ...|  Los Angeles|  138|      35|
+| user69|2025-04-22 11:59:06|Can't believe wha...|[kafka, tech, dat...|      Chicago|  814|     257|
+| user53|2025-04-22 11:59:06|What do you think...|[ML, health, AI, ...|San Francisco|  675|     219|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user64|2025-04-22 12:00:00|Amazing developme...|           [science]|     New York|  526|      21|
+| user49|2025-04-22 12:00:00|Here's my take on...|      [music, spark]|Washington DC|  691|     142|
+| user13|2025-04-22 12:00:00|Breaking news abo...|[programming, fit...|        Miami|  781|     299|
+| user58|2025-04-22 12:00:01|Excited to explor...|           [bigdata]|      Chicago|  623|      96|
+| user83|2025-04-22 12:00:01|Breaking news abo...|[programming, tre...|Washington DC|  470|     194|
+| user41|2025-04-22 12:00:01|Everyone should k...|[python, fitness,...|San Francisco|  798|     272|
+| user24|2025-04-22 12:00:01|Everyone should k...|[health, python, ...|Washington DC|  300|     125|
+| user91|2025-04-22 12:00:02|Learning more abo...|[bigdata, spark, ...|        Miami|  472|     153|
+| user21|2025-04-22 12:00:02|Everyone should k...|            [movies]|Washington DC|  552|     163|
+| user83|2025-04-22 12:00:02|Just shared my th...|[cloud, music, te...|     New York|  855|     216|
+| user79|2025-04-22 12:00:02|Just shared my th...|[health, music, s...|       Boston|  483|     286|
+| user71|2025-04-22 12:00:03|Interesting persp...|[music, travel, t...|      Chicago|  134|     236|
+| user51|2025-04-22 12:00:03|Everyone should k...|     [AI, analytics]|       Denver|  764|     205|
+|  user6|2025-04-22 12:00:03|What do you think...|[fashion, bigdata...|       Denver|  937|     109|
+| user27|2025-04-22 12:00:03|Can't believe wha...|      [ML, AI, food]|Washington DC|  916|     236|
+| user17|2025-04-22 12:00:04|Can't believe wha...|[kafka, programmi...|       Boston|  402|     181|
+| user75|2025-04-22 12:00:04|Breaking news abo...|[java, ML, sports...|       Austin|  951|     201|
+| user81|2025-04-22 12:00:04|Everyone should k...|[food, datascienc...|       Austin|  823|     299|
+|  user4|2025-04-22 12:00:05|Here's my take on...|  [kafka, AI, spark]|      Chicago|  879|     145|
+| user72|2025-04-22 12:00:05|Can't believe wha...|[environment, ana...|     New York|  233|     233|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user86|2025-04-22 12:01:00|Everyone should k...|             [spark]|     New York|  879|      39|
+| user59|2025-04-22 12:01:00|Amazing developme...|           [science]|      Chicago|  860|     259|
+| user87|2025-04-22 12:01:00|What do you think...|       [fashion, ML]|       Denver|  827|      49|
+| user62|2025-04-22 12:01:00|Interesting persp...|  [sports, database]|      Chicago|  207|     191|
+| user76|2025-04-22 12:01:01|Amazing developme...|[travel, science,...|      Chicago|  487|     282|
+|  user7|2025-04-22 12:01:01|What do you think...|[fashion, datasci...|        Miami|  125|     252|
+| user96|2025-04-22 12:01:02|Can't believe wha...|[news, science, f...|      Seattle|  701|      20|
+| user97|2025-04-22 12:01:02|Breaking news abo...|  [travel, food, AI]|  Los Angeles|  240|      29|
+|  user2|2025-04-22 12:01:02|Excited to explor...|[environment, str...|  Los Angeles|  295|     210|
+| user28|2025-04-22 12:01:03|Interesting persp...| [education, sports]|      Seattle|  112|      89|
+| user53|2025-04-22 12:01:03|Here's my take on...|[science, environ...|San Francisco|  829|     109|
+| user39|2025-04-22 12:01:03|What do you think...|[java, science, t...|      Chicago|  178|      16|
+| user88|2025-04-22 12:01:03|Can't believe wha...|[tech, programmin...|Washington DC|  244|     246|
+| user73|2025-04-22 12:01:03|Interesting persp...|              [news]|       Boston|  496|     284|
+| user21|2025-04-22 12:01:04|Amazing developme...|[education, datas...|      Chicago|  867|     148|
+| user87|2025-04-22 12:01:04|Amazing developme...|              [java]|  Los Angeles|  500|     152|
+| user76|2025-04-22 12:01:04|Can't believe wha...|[streaming, healt...|       Denver|  177|     156|
+| user10|2025-04-22 12:01:05|Interesting persp...|      [kafka, cloud]|       Austin|  779|     270|
+| user81|2025-04-22 12:01:05|Can't believe wha...|[trending, bigdat...|  Los Angeles|  705|     289|
+|  user7|2025-04-22 12:01:05|What do you think...|[sports, science,...|     New York|  661|     127|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user17|2025-04-22 12:02:00|Breaking news abo...|[ML, health, kafk...|       Boston|  633|     153|
+| user23|2025-04-22 12:02:00|Learning more abo...|            [health]|Washington DC|  773|     281|
+| user90|2025-04-22 12:02:01|Amazing developme...|        [java, tech]|       Denver|  115|      85|
+| user85|2025-04-22 12:02:01|Interesting persp...|[spark, sports, m...|Washington DC|  206|     175|
+| user58|2025-04-22 12:02:01|Excited to explor...|           [fashion]|San Francisco|  737|     118|
+| user70|2025-04-22 12:02:02|Everyone should k...|[spark, database,...|      Seattle|  735|     206|
+| user20|2025-04-22 12:02:02|Everyone should k...|[news, python, da...|      Seattle|  215|     159|
+| user21|2025-04-22 12:02:02|Learning more abo...|       [food, cloud]|       Denver|  162|      72|
+| user61|2025-04-22 12:02:03|Excited to explor...|[music, education...|Washington DC|  687|      48|
+| user30|2025-04-22 12:02:03|What do you think...|[trending, ML, st...|       Denver|  572|      41|
+| user67|2025-04-22 12:02:03|Interesting persp...|[spark, food, pro...|  Los Angeles|  277|     198|
+| user98|2025-04-22 12:02:04|Interesting persp...| [news, environment]|       Denver|  275|     296|
+| user76|2025-04-22 12:02:04|Excited to explor...|    [health, travel]|       Austin|   17|     300|
+| user14|2025-04-22 12:02:04|Just shared my th...|         [analytics]|     New York|  272|     281|
+| user69|2025-04-22 12:02:05|What do you think...|[environment, dat...|       Boston|  173|      88|
+| user78|2025-04-22 12:02:05|Learning more abo...|[AI, analytics, f...|       Denver|  139|     130|
+|  user2|2025-04-22 12:02:05|Interesting persp...|      [spark, cloud]|        Miami|  198|     124|
+|  user6|2025-04-22 12:02:05|Breaking news abo...|   [bigdata, travel]|       Boston|  168|     132|
+| user68|2025-04-22 12:02:06|What do you think...|[trending, java, ...|       Boston|  346|     192|
+| user41|2025-04-22 12:02:06|Just shared my th...|       [programming]|     New York|  348|     164|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user54|2025-04-22 12:03:00|Everyone should k...|[bigdata, trendin...|     New York|  363|      45|
+| user12|2025-04-22 12:03:00|Excited to explor...|[datascience, tre...|       Denver|  802|     136|
+| user36|2025-04-22 12:03:01|Excited to explor...|             [spark]|       Boston|  475|     139|
+| user50|2025-04-22 12:03:01|Just shared my th...|[kafka, ML, fashi...|Washington DC|  910|     192|
+|  user9|2025-04-22 12:03:01|Just shared my th...|    [music, bigdata]|Washington DC|  350|     102|
+| user61|2025-04-22 12:03:02|What do you think...|             [music]|        Miami|  948|     256|
+| user28|2025-04-22 12:03:02|Interesting persp...|[java, trending, ...|     New York|  893|     102|
+| user17|2025-04-22 12:03:02|Learning more abo...|   [fitness, sports]|       Austin|  803|     117|
+| user27|2025-04-22 12:03:03|What do you think...|                [ML]|     New York|  216|      17|
+| user23|2025-04-22 12:03:03|Learning more abo...|                [ML]|       Denver|  783|     134|
+| user13|2025-04-22 12:03:03|Just shared my th...|          [database]|San Francisco|  812|     193|
+| user90|2025-04-22 12:03:04|Amazing developme...| [food, music, tech]|        Miami|  168|     133|
+| user44|2025-04-22 12:03:04|Here's my take on...|  [analytics, cloud]|Washington DC|  824|      32|
+| user97|2025-04-22 12:03:04|Breaking news abo...|[fitness, science...|San Francisco|  344|     247|
+| user10|2025-04-22 12:03:04|Just shared my th...|           [fashion]|      Seattle|  269|     207|
+| user67|2025-04-22 12:03:04|Just shared my th...|[music, java, foo...|     New York|  417|      75|
+| user66|2025-04-22 12:03:05|Interesting persp...|[programming, mus...|San Francisco|  555|      27|
+| user74|2025-04-22 12:03:05|Everyone should k...|[sports, java, mu...|       Denver|  802|     297|
+| user51|2025-04-22 12:03:05|Here's my take on...|[python, programm...|      Chicago|  253|     224|
+|  user6|2025-04-22 12:03:06|Here's my take on...|[spark, analytics...|       Boston|  540|     208|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user16|2025-04-22 12:04:00|What do you think...|[environment, big...|        Miami|  758|      90|
+| user20|2025-04-22 12:04:00|Can't believe wha...|            [travel]|Washington DC|  320|     171|
+| user39|2025-04-22 12:04:00|Here's my take on...|[health, streamin...|       Denver|  371|      39|
+|  user7|2025-04-22 12:04:01|Everyone should k...|     [tech, science]|       Denver|  568|     228|
+| user43|2025-04-22 12:04:01|Just shared my th...|[music, AI, trave...|  Los Angeles|  696|      24|
+| user31|2025-04-22 12:04:02|Amazing developme...|            [health]|        Miami|  488|     127|
+|user100|2025-04-22 12:04:02|What do you think...|            [python]|       Boston|  898|     241|
+| user47|2025-04-22 12:04:02|Learning more abo...|    [travel, sports]|Washington DC|  325|     202|
+| user43|2025-04-22 12:04:02|Excited to explor...|             [spark]|     New York|  116|     259|
+| user27|2025-04-22 12:04:03|Excited to explor...|[AI, database, ja...|San Francisco|   19|      35|
+| user91|2025-04-22 12:04:03|Interesting persp...|[education, strea...|     New York|  216|     288|
+| user62|2025-04-22 12:04:03|Learning more abo...|[food, datascienc...|      Seattle|  887|     175|
+| user19|2025-04-22 12:04:03|Just shared my th...|[news, health, fa...|      Chicago|  782|     206|
+| user98|2025-04-22 12:04:04|Amazing developme...|[database, kafka,...|       Austin|  480|      12|
+|  user6|2025-04-22 12:04:04|Learning more abo...|           [science]|      Seattle|  149|     130|
+| user36|2025-04-22 12:04:04|Breaking news abo...|[news, analytics,...|  Los Angeles|  517|      34|
+| user92|2025-04-22 12:04:05|What do you think...|[tech, environmen...|San Francisco|  705|      14|
+| user70|2025-04-22 12:04:05|Interesting persp...|[cloud, bigdata, ...|Washington DC|  454|      20|
+| user45|2025-04-22 12:04:05|Amazing developme...|          [database]|Washington DC|  157|     189|
+| user18|2025-04-22 12:04:06|Learning more abo...|[movies, news, pr...|       Austin|   99|     231|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user89|2025-04-22 12:05:00|Amazing developme...|      [music, cloud]|      Chicago|  251|     240|
+| user87|2025-04-22 12:05:00|What do you think...|[education, kafka...|     New York|  902|     210|
+| user45|2025-04-22 12:05:00|Interesting persp...|[programming, clo...|       Boston|  435|       4|
+| user54|2025-04-22 12:05:00|Just shared my th...|           [fitness]|      Seattle|  333|      45|
+| user16|2025-04-22 12:05:01|Can't believe wha...|[science, news, t...|        Miami|  293|     127|
+| user82|2025-04-22 12:05:01|Can't believe wha...|[music, sports, p...|  Los Angeles|  590|      99|
+| user58|2025-04-22 12:05:01|Everyone should k...|[environment, big...|San Francisco|  338|     147|
+| user93|2025-04-22 12:05:01|Learning more abo...|[datascience, mov...|      Chicago|  940|     246|
+| user36|2025-04-22 12:05:01|Excited to explor...|[analytics, fashi...|      Seattle|  722|      40|
+| user49|2025-04-22 12:05:02|Can't believe wha...|[music, kafka, ML...|      Seattle|   47|     103|
+|  user7|2025-04-22 12:05:02|Can't believe wha...|[programming, dat...|  Los Angeles|  511|      84|
+| user68|2025-04-22 12:05:02|Everyone should k...|[database, sports...|      Chicago|  261|      55|
+|  user2|2025-04-22 12:05:02|Can't believe wha...|[java, sports, ML...|        Miami|  490|     127|
+| user78|2025-04-22 12:05:02|Everyone should k...|[datascience, mov...|        Miami|  828|      87|
+| user95|2025-04-22 12:05:03|Excited to explor...|[ML, trending, da...|     New York|  757|     112|
+| user49|2025-04-22 12:05:03|Everyone should k...|          [food, AI]|       Boston|   76|     281|
+| user24|2025-04-22 12:05:03|What do you think...|[python, kafka, e...|        Miami|  691|     239|
+| user86|2025-04-22 12:05:04|Can't believe wha...|[streaming, pytho...|Washington DC|  618|     137|
+|  user3|2025-04-22 12:05:04|Interesting persp...|[fashion, streami...|  Los Angeles|   87|      91|
+| user79|2025-04-22 12:05:04|Breaking news abo...|[environment, ana...|       Denver|   65|     278|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user58|2025-04-22 12:06:00|Everyone should k...|[streaming, progr...|Washington DC|  493|     182|
+| user22|2025-04-22 12:06:00|Excited to explor...|[analytics, kafka...|Washington DC|  782|     105|
+| user18|2025-04-22 12:06:00|Learning more abo...|[sports, music, b...|Washington DC|  148|      75|
+| user28|2025-04-22 12:06:01|Amazing developme...|[programming, tre...|       Boston|  761|     140|
+| user41|2025-04-22 12:06:01|Breaking news abo...|[news, education,...|     New York|  500|     146|
+| user51|2025-04-22 12:06:02|What do you think...|[database, trendi...|     New York|  492|     117|
+| user56|2025-04-22 12:06:02|Everyone should k...|[travel, datascie...|      Seattle|  225|      10|
+| user30|2025-04-22 12:06:02|Here's my take on...|[fashion, python,...|       Denver|  144|      18|
+| user32|2025-04-22 12:06:02|Interesting persp...|[environment, jav...|       Austin|  169|     180|
+| user57|2025-04-22 12:06:03|Breaking news abo...|   [health, science]|        Miami|  972|     126|
+| user64|2025-04-22 12:06:03|Can't believe wha...|  [fashion, fitness]|       Austin|  767|      15|
+| user14|2025-04-22 12:06:03|Learning more abo...|              [food]|       Boston|  647|      29|
+| user39|2025-04-22 12:06:03|Excited to explor...|          [trending]|  Los Angeles|  383|      69|
+| user23|2025-04-22 12:06:03|Just shared my th...|[food, health, mo...|       Austin|  110|     198|
+| user18|2025-04-22 12:06:03|Can't believe wha...|[programming, jav...|        Miami|  954|     254|
+| user51|2025-04-22 12:06:04|Excited to explor...|[kafka, programmi...|Washington DC|  489|       5|
+| user18|2025-04-22 12:06:04|Learning more abo...|             [spark]|San Francisco|  400|     269|
+| user48|2025-04-22 12:06:05|Interesting persp...|[analytics, movie...|        Miami|  833|      93|
+| user52|2025-04-22 12:06:05|What do you think...|[music, bigdata, ...|       Denver|  163|      70|
+| user14|2025-04-22 12:06:05|Breaking news abo...|[education, AI, s...|       Boston|  910|      25|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user30|2025-04-22 12:07:00|What do you think...| [trending, science]|       Austin|  663|     248|
+| user46|2025-04-22 12:07:00|Learning more abo...|[java, cloud, big...|       Denver|   23|     271|
+| user73|2025-04-22 12:07:00|Everyone should k...|[streaming, progr...|Washington DC|  180|     263|
+|  user1|2025-04-22 12:07:01|Can't believe wha...|      [health, tech]|       Boston|  609|     299|
+| user95|2025-04-22 12:07:01|Can't believe wha...|    [food, trending]|      Seattle|  502|     153|
+| user57|2025-04-22 12:07:01|Everyone should k...|[science, movies,...|       Denver|  627|     105|
+|user100|2025-04-22 12:07:02|Amazing developme...|[education, AI, s...|      Chicago|  904|      30|
+| user31|2025-04-22 12:07:02|Can't believe wha...|[news, streaming,...|  Los Angeles|  205|     186|
+| user63|2025-04-22 12:07:02|Breaking news abo...|          [trending]|  Los Angeles|  361|      64|
+| user25|2025-04-22 12:07:03|Amazing developme...|[cloud, python, s...|San Francisco|  466|     213|
+| user47|2025-04-22 12:07:03|Learning more abo...|[movies, programm...|      Chicago|  654|       7|
+| user79|2025-04-22 12:07:03|Amazing developme...|[bigdata, streami...|       Denver|  257|     207|
+| user81|2025-04-22 12:07:04|Breaking news abo...|       [environment]|       Boston|  779|     200|
+| user33|2025-04-22 12:07:04|Here's my take on...|[spark, fitness, ...|     New York|  390|     121|
+| user88|2025-04-22 12:07:04|Excited to explor...|            [movies]|      Chicago|  723|     121|
+| user80|2025-04-22 12:07:05|Just shared my th...|[science, AI, env...|       Denver|  218|      25|
+|  user9|2025-04-22 12:07:05|Interesting persp...|              [tech]|      Seattle|  808|      61|
+| user80|2025-04-22 12:07:05|Learning more abo...|[ML, trending, mo...|San Francisco|   87|     265|
+| user53|2025-04-22 12:07:06|Just shared my th...| [music, tech, news]|        Miami|  476|       6|
+| user34|2025-04-22 12:07:06|Here's my take on...|                [ML]|       Boston|  372|      51|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user58|2025-04-22 12:08:00|Excited to explor...|   [tech, streaming]|      Chicago|  993|      63|
+| user60|2025-04-22 12:08:00|Excited to explor...|[cloud, movies, d...|     New York|   77|      33|
+| user53|2025-04-22 12:08:00|Everyone should k...|[education, ML, t...|       Austin|  148|     270|
+| user40|2025-04-22 12:08:01|Interesting persp...|[science, trendin...|       Denver|  316|     147|
+| user42|2025-04-22 12:08:01|Everyone should k...|[analytics, datas...|  Los Angeles|  260|     190|
+| user36|2025-04-22 12:08:01|Breaking news abo...|[travel, ML, data...|  Los Angeles|  169|      40|
+| user25|2025-04-22 12:08:01|Everyone should k...|[fitness, health,...|     New York|  944|     216|
+| user38|2025-04-22 12:08:02|Interesting persp...|[health, ML, musi...|San Francisco|  855|      78|
+| user37|2025-04-22 12:08:02|Here's my take on...|[bigdata, travel,...|      Chicago|  297|     116|
+| user19|2025-04-22 12:08:02|Here's my take on...|[ML, environment,...|     New York|  911|     235|
+| user53|2025-04-22 12:08:02|Breaking news abo...| [food, environment]|       Austin|  342|     288|
+| user36|2025-04-22 12:08:03|Everyone should k...|[science, streami...|      Chicago|  541|     225|
+| user62|2025-04-22 12:08:03|Here's my take on...|           [bigdata]|       Denver|  469|     274|
+| user63|2025-04-22 12:08:04|Here's my take on...|[travel, fashion,...|      Chicago|  504|      69|
+| user43|2025-04-22 12:08:04|Can't believe wha...|       [datascience]|Washington DC|  701|     154|
+| user47|2025-04-22 12:08:04|Learning more abo...|              [tech]|        Miami|  442|       8|
+| user35|2025-04-22 12:08:05|Learning more abo...|[database, stream...|      Chicago|  932|     141|
+| user62|2025-04-22 12:08:05|Interesting persp...|[database, cloud,...|       Austin|  933|      17|
+| user22|2025-04-22 12:08:05|Learning more abo...|[ML, tech, datasc...|        Miami|   93|     266|
+| user77|2025-04-22 12:08:05|Breaking news abo...|[python, food, mo...|       Boston|  316|       4|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user25|2025-04-22 12:09:00|Excited to explor...|[AI, database, fi...|     New York|  437|      83|
+| user43|2025-04-22 12:09:00|Learning more abo...|     [travel, kafka]|       Austin|  116|      85|
+| user29|2025-04-22 12:09:00|Amazing developme...|[bigdata, program...|        Miami|  657|      39|
+|  user8|2025-04-22 12:09:01|What do you think...|[fashion, trendin...|San Francisco|   48|      73|
+| user44|2025-04-22 12:09:01|Breaking news abo...|[datascience, ana...|        Miami|  397|     141|
+|  user3|2025-04-22 12:09:01|Here's my take on...|[food, sports, java]|        Miami|  781|      79|
+| user61|2025-04-22 12:09:02|Can't believe wha...|[datascience, ML,...|      Seattle|  640|      94|
+| user28|2025-04-22 12:09:02|Everyone should k...|[health, food, ka...|       Austin|  955|     274|
+|  user8|2025-04-22 12:09:02|Learning more abo...|[datascience, mus...|  Los Angeles|   89|     266|
+| user79|2025-04-22 12:09:03|Amazing developme...|       [music, java]|Washington DC|  248|     107|
+|  user4|2025-04-22 12:09:03|Here's my take on...|[environment, spo...|San Francisco|  464|     122|
+|user100|2025-04-22 12:09:03|Learning more abo...|[ML, python, AI, ...|Washington DC|  829|      56|
+|  user5|2025-04-22 12:09:04|Interesting persp...|         [streaming]|       Boston|  739|      43|
+| user69|2025-04-22 12:09:04|Just shared my th...|[trending, datasc...|     New York|  828|     165|
+| user92|2025-04-22 12:09:04|Learning more abo...|            [sports]|       Boston|  275|     160|
+| user43|2025-04-22 12:09:05|Breaking news abo...|[environment, str...|      Seattle|  398|      46|
+| user81|2025-04-22 12:09:05|Here's my take on...|            [sports]|       Boston|  656|     116|
+| user49|2025-04-22 12:09:05|Everyone should k...|    [tech, database]|       Austin|  573|     293|
+| user99|2025-04-22 12:09:05|Everyone should k...|       [AI, fashion]|       Austin|  774|      58|
+| user91|2025-04-22 12:09:06|Everyone should k...|              [news]|      Chicago|  832|      28|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user48|2025-04-22 12:10:00|Amazing developme...| [music, ML, sports]|San Francisco|   47|     238|
+| user78|2025-04-22 12:10:00|Interesting persp...|[java, food, AI, ...|      Chicago|  845|      86|
+| user52|2025-04-22 12:10:00|What do you think...|[travel, tech, cl...|       Denver|  794|     165|
+| user44|2025-04-22 12:10:00|Here's my take on...|[bigdata, python,...|Washington DC|  843|      34|
+| user91|2025-04-22 12:10:00|Amazing developme...|     [bigdata, food]|       Austin|  803|       5|
+| user72|2025-04-22 12:10:01|Amazing developme...|[datascience, tec...|       Boston|   69|     147|
+| user67|2025-04-22 12:10:01|What do you think...| [python, education]|San Francisco|  314|      19|
+| user10|2025-04-22 12:10:01|Just shared my th...|[AI, database, ka...|Washington DC|  244|     259|
+| user89|2025-04-22 12:10:02|Learning more abo...|       [food, cloud]|     New York|  839|      80|
+| user12|2025-04-22 12:10:02|Can't believe wha...|     [science, java]|        Miami|  589|     220|
+| user77|2025-04-22 12:10:02|Learning more abo...|         [spark, ML]|     New York|   37|      21|
+| user49|2025-04-22 12:10:02|Amazing developme...|[kafka, AI, trend...|        Miami|  385|       3|
+| user91|2025-04-22 12:10:03|What do you think...|[food, trending, ...|        Miami|   35|     149|
+| user86|2025-04-22 12:10:03|What do you think...|[cloud, health, d...|       Boston|    1|       3|
+| user24|2025-04-22 12:10:03|What do you think...|[kafka, music, tr...|       Austin|  888|      51|
+| user18|2025-04-22 12:10:04|Breaking news abo...|[fashion, food, d...|      Seattle|  600|      43|
+| user91|2025-04-22 12:10:04|Breaking news abo...|[sports, bigdata,...|     New York|   32|     300|
+| user70|2025-04-22 12:10:04|Learning more abo...|[cloud, bigdata, ...|      Chicago|  918|     265|
+| user65|2025-04-22 12:10:05|Just shared my th...|[kafka, travel, s...|       Denver|  275|      56|
+| user52|2025-04-22 12:10:05|Just shared my th...|                [ML]|      Chicago|  682|     258|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user28|2025-04-22 12:11:00|What do you think...|[trending, fitnes...|San Francisco|  393|      16|
+| user51|2025-04-22 12:11:00|What do you think...|      [trending, AI]|Washington DC|  144|     108|
+| user89|2025-04-22 12:11:00|Here's my take on...|[education, progr...|       Austin|  752|     124|
+| user67|2025-04-22 12:11:00|Can't believe wha...|[health, fitness,...|San Francisco|  944|     198|
+| user40|2025-04-22 12:11:00|Breaking news abo...|              [food]|       Boston|   82|     209|
+|  user8|2025-04-22 12:11:01|Learning more abo...|[health, fashion,...|San Francisco|  488|     215|
+| user54|2025-04-22 12:11:01|Everyone should k...|[health, java, st...|San Francisco|  674|     180|
+| user90|2025-04-22 12:11:01|Amazing developme...|[database, bigdat...|      Seattle|  429|      46|
+|user100|2025-04-22 12:11:02|Everyone should k...|[database, educat...|Washington DC|  884|     222|
+| user65|2025-04-22 12:11:02|Learning more abo...|[music, analytics...|  Los Angeles|  621|     286|
+| user34|2025-04-22 12:11:02|Just shared my th...|[fashion, ML, AI,...|  Los Angeles|   29|     271|
+| user79|2025-04-22 12:11:03|Just shared my th...|[environment, fas...|San Francisco|  169|     179|
+| user96|2025-04-22 12:11:03|Just shared my th...|[python, tech, pr...|  Los Angeles|  456|      32|
+| user25|2025-04-22 12:11:03|Amazing developme...|[bigdata, cloud, ...|       Boston|   27|     162|
+|  user4|2025-04-22 12:11:04|What do you think...|[news, ML, trending]|       Denver|   55|       1|
+| user98|2025-04-22 12:11:04|Interesting persp...|[environment, fas...|       Denver|  912|     128|
+| user20|2025-04-22 12:11:04|Breaking news abo...|[java, trending, ...|       Boston|  860|     258|
+| user47|2025-04-22 12:11:04|Interesting persp...|[database, sports...|Washington DC|   61|      19|
+| user63|2025-04-22 12:11:05|Everyone should k...|             [kafka]|San Francisco|  472|     163|
+| user62|2025-04-22 12:11:05|Amazing developme...|[movies, bigdata,...|San Francisco|  785|      96|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 15
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user94|2025-04-22 12:12:00|Amazing developme...|     [movies, kafka]|San Francisco|  645|      56|
+| user30|2025-04-22 12:12:00|Breaking news abo...|          [database]|      Chicago|  847|       4|
+| user80|2025-04-22 12:12:00|Breaking news abo...|[ML, trending, fa...|       Austin|  571|      32|
+| user11|2025-04-22 12:12:01|Excited to explor...|      [AI, database]|  Los Angeles|  813|     255|
+| user51|2025-04-22 12:12:01|Here's my take on...|  [fitness, science]|  Los Angeles|   78|     253|
+| user10|2025-04-22 12:12:01|Can't believe wha...|             [cloud]|       Denver|  927|     268|
+| user34|2025-04-22 12:12:01|Excited to explor...|[spark, programmi...|       Boston|  831|     105|
+| user37|2025-04-22 12:12:02|Can't believe wha...|[music, spark, mo...|     New York|  865|     220|
+| user95|2025-04-22 12:12:02|Can't believe wha...|[bigdata, music, ...|Washington DC|  663|      38|
+| user38|2025-04-22 12:12:03|Everyone should k...|              [news]|Washington DC|  477|     131|
+|  user5|2025-04-22 12:12:03|What do you think...|[cloud, movies, s...|     New York|  461|     169|
+| user53|2025-04-22 12:12:03|Breaking news abo...|    [travel, health]|San Francisco|  629|     187|
+| user20|2025-04-22 12:12:03|Everyone should k...|[health, datascie...|       Denver|  797|     255|
+| user91|2025-04-22 12:12:04|Here's my take on...|[datascience, env...|      Chicago|  837|     172|
+| user64|2025-04-22 12:12:04|Everyone should k...|[tech, datascienc...|  Los Angeles|  813|     280|
+| user86|2025-04-22 12:12:04|Interesting persp...|[streaming, envir...|Washington DC|  901|     103|
+| user20|2025-04-22 12:12:05|Can't believe wha...|[fashion, education]|     New York|  553|     207|
+| user90|2025-04-22 12:12:05|Amazing developme...|            [python]|        Miami|  678|     237|
+| user42|2025-04-22 12:12:05|Amazing developme...|     [java, fitness]|  Los Angeles|  545|      11|
+| user58|2025-04-22 12:12:06|Amazing developme...|      [python, java]|      Chicago|  190|      82|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 16
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user63|2025-04-22 12:13:00|Just shared my th...|[tech, bigdata, d...|        Miami|  219|      55|
+| user91|2025-04-22 12:13:00|Can't believe wha...|[java, health, tr...|        Miami|  695|     101|
+| user73|2025-04-22 12:13:00|Everyone should k...|       [environment]|        Miami|  561|      73|
+| user88|2025-04-22 12:13:01|Excited to explor...|[cloud, streaming...|Washington DC|   25|     296|
+| user28|2025-04-22 12:13:01|Here's my take on...|     [music, python]|Washington DC|   31|     241|
+| user50|2025-04-22 12:13:01|Breaking news abo...|   [music, trending]|San Francisco|  717|       5|
+| user98|2025-04-22 12:13:01|Learning more abo...|[music, kafka, ne...|       Denver|  476|      42|
+| user77|2025-04-22 12:13:02|Can't believe wha...|[AI, bigdata, tra...|San Francisco|   12|     198|
+| user10|2025-04-22 12:13:02|What do you think...|[sports, programm...|       Austin|  105|       4|
+| user24|2025-04-22 12:13:02|Can't believe wha...|[ML, datascience,...|     New York|   52|     136|
+| user79|2025-04-22 12:13:02|Here's my take on...|[health, streamin...|     New York|  172|     147|
+| user61|2025-04-22 12:13:03|Here's my take on...|[bigdata, movies,...|  Los Angeles|  308|      30|
+| user60|2025-04-22 12:13:03|Here's my take on...|   [fitness, movies]|       Austin|  219|      10|
+| user50|2025-04-22 12:13:03|Learning more abo...|          [ML, java]|Washington DC|  469|     231|
+|  user8|2025-04-22 12:13:04|Everyone should k...|    [fitness, cloud]|       Denver|  946|      43|
+| user94|2025-04-22 12:13:04|Learning more abo...|[music, news, fit...|        Miami|  618|      40|
+| user64|2025-04-22 12:13:05|Learning more abo...|[analytics, cloud...|San Francisco|  666|     176|
+| user31|2025-04-22 12:13:05|Learning more abo...|[music, datascien...|       Boston|  256|      53|
+| user64|2025-04-22 12:13:05|Amazing developme...|[health, python, ...|       Denver|  300|     226|
+| user25|2025-04-22 12:13:06|Amazing developme...|[streaming, kafka...|      Seattle|  284|     238|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 17
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user29|2025-04-22 12:14:00|Excited to explor...|[database, sports...|       Denver|  539|      34|
+| user38|2025-04-22 12:14:00|Everyone should k...|[sports, educatio...|      Chicago|    5|     229|
+|  user4|2025-04-22 12:14:00|Can't believe wha...|       [programming]|      Chicago| 1000|     261|
+| user42|2025-04-22 12:14:01|Just shared my th...|[programming, tra...|      Chicago|  163|     231|
+| user80|2025-04-22 12:14:01|Breaking news abo...|[spark, travel, c...|       Denver|  353|     148|
+| user34|2025-04-22 12:14:01|Everyone should k...|   [movies, science]|       Boston|  187|       8|
+| user93|2025-04-22 12:14:01|Just shared my th...|[programming, mov...|     New York|   24|       9|
+| user28|2025-04-22 12:14:02|Excited to explor...|            [movies]|       Denver|    3|      49|
+| user98|2025-04-22 12:14:02|Interesting persp...| [travel, education]|      Chicago|  248|      62|
+| user33|2025-04-22 12:14:02|Just shared my th...|              [java]|  Los Angeles|  810|     129|
+|  user1|2025-04-22 12:14:03|Everyone should k...|[cloud, environment]|       Austin|  754|     146|
+| user28|2025-04-22 12:14:03|What do you think...|[bigdata, python,...|     New York| 1000|      39|
+| user70|2025-04-22 12:14:04|Can't believe wha...|[environment, AI,...|Washington DC|  914|     167|
+| user11|2025-04-22 12:14:04|Amazing developme...|[movies, trending...|       Denver|  932|      80|
+| user11|2025-04-22 12:14:04|Just shared my th...|[spark, education...|      Chicago|  492|      95|
+| user95|2025-04-22 12:14:04|Here's my take on...|         [analytics]|Washington DC|  219|      26|
+| user90|2025-04-22 12:14:05|Can't believe wha...|[movies, fashion,...|  Los Angeles|  714|     229|
+| user28|2025-04-22 12:14:05|Excited to explor...|[fashion, sports,...|San Francisco|  150|      75|
+| user26|2025-04-22 12:14:05|Amazing developme...|[bigdata, music, ...|       Austin|  931|     175|
+| user56|2025-04-22 12:14:06|Interesting persp...|[cloud, trending,...|  Los Angeles|   70|      36|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 18
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|  user1|2025-04-22 12:15:00|Here's my take on...|  [music, analytics]|San Francisco|  467|     192|
+| user25|2025-04-22 12:15:00|Breaking news abo...|[AI, bigdata, tec...|     New York|  537|     255|
+| user54|2025-04-22 12:15:01|What do you think...|   [analytics, tech]|  Los Angeles|  144|      39|
+| user53|2025-04-22 12:15:01|Can't believe wha...|[health, environm...|      Seattle|  529|     167|
+| user18|2025-04-22 12:15:01|Interesting persp...|[kafka, ML, datab...|San Francisco|  181|     250|
+| user27|2025-04-22 12:15:01|Breaking news abo...|[music, analytics...|       Denver|  282|      69|
+|  user4|2025-04-22 12:15:02|Can't believe wha...|              [news]|       Boston|  169|       4|
+| user11|2025-04-22 12:15:02|Breaking news abo...|        [ML, movies]|       Boston|  337|       3|
+| user42|2025-04-22 12:15:02|Just shared my th...|[programming, mus...|  Los Angeles|  305|      15|
+| user67|2025-04-22 12:15:03|Learning more abo...|[science, program...|      Chicago|  686|     158|
+| user72|2025-04-22 12:15:03|Breaking news abo...|[sports, educatio...|       Austin|  423|     261|
+| user17|2025-04-22 12:15:03|Breaking news abo...|          [news, ML]|     New York|  487|      46|
+|  user1|2025-04-22 12:15:03|Interesting persp...|[spark, environme...|       Austin|   98|      49|
+| user62|2025-04-22 12:15:04|Can't believe wha...|             [kafka]|       Austin|  697|     120|
+| user10|2025-04-22 12:15:04|Just shared my th...| [AI, science, tech]|  Los Angeles|  693|      94|
+| user67|2025-04-22 12:15:04|Amazing developme...|[health, fitness,...|      Chicago|  878|      14|
+|  user1|2025-04-22 12:15:05|Breaking news abo...|  [music, AI, spark]|       Denver|   98|     166|
+| user81|2025-04-22 12:15:05|Here's my take on...|          [trending]|     New York|  592|     234|
+| user90|2025-04-22 12:15:05|Here's my take on...|[streaming, pytho...|       Austin|  217|      97|
+| user39|2025-04-22 12:15:06|Can't believe wha...|[music, science, ...|San Francisco|  811|     258|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 19
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user45|2025-04-22 12:16:00|Interesting persp...|      [music, kafka]|     New York|  109|     222|
+| user45|2025-04-22 12:16:00|Amazing developme...|[environment, tra...|Washington DC|  677|      82|
+| user10|2025-04-22 12:16:00|Excited to explor...|           [fashion]|  Los Angeles|  231|     196|
+| user21|2025-04-22 12:16:01|Can't believe wha...|  [fashion, bigdata]|      Seattle|  355|     202|
+| user87|2025-04-22 12:16:01|Learning more abo...|     [ML, education]|        Miami|  422|     256|
+| user96|2025-04-22 12:16:01|Just shared my th...|[java, science, t...|       Austin|  524|      49|
+| user71|2025-04-22 12:16:02|Can't believe wha...|  [education, kafka]|       Austin|  728|     120|
+| user40|2025-04-22 12:16:02|Can't believe wha...|[health, analytic...|       Denver|  884|     178|
+| user19|2025-04-22 12:16:02|What do you think...|             [spark]|       Austin|  750|     172|
+| user95|2025-04-22 12:16:03|What do you think...|   [analytics, tech]|San Francisco|  868|     190|
+| user45|2025-04-22 12:16:03|Breaking news abo...|[travel, datascie...|       Boston|  874|      33|
+| user24|2025-04-22 12:16:03|Breaking news abo...|[programming, big...|Washington DC|  656|     200|
+| user66|2025-04-22 12:16:04|What do you think...|[programming, big...|      Seattle|   33|      39|
+|  user6|2025-04-22 12:16:04|Everyone should k...|[sports, tech, java]|      Chicago|  384|     195|
+| user61|2025-04-22 12:16:05|Can't believe wha...|[java, sports, da...|       Austin|  538|     276|
+| user87|2025-04-22 12:16:05|Interesting persp...|[trending, food, ...|        Miami|   33|     143|
+| user11|2025-04-22 12:16:05|Interesting persp...|[java, bigdata, t...|     New York|  145|     100|
+| user46|2025-04-22 12:16:06|Learning more abo...|[cloud, analytics...|       Denver|  452|      67|
+| user38|2025-04-22 12:16:06|Breaking news abo...|[java, AI, progra...|     New York|  756|     287|
+| user44|2025-04-22 12:16:06|Learning more abo...|[food, python, cl...|     New York|  231|     288|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 20
+-------------------------------------------
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+|user_id|          timestamp|             content|            hashtags|     location|likes|retweets|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+| user30|2025-04-22 12:17:00|Here's my take on...|            [health]|      Chicago|  654|      14|
+| user19|2025-04-22 12:17:00|What do you think...|[bigdata, travel,...|        Miami|  727|      58|
+| user82|2025-04-22 12:17:01|Here's my take on...|     [streaming, ML]|      Chicago|  298|     274|
+| user54|2025-04-22 12:17:01|Breaking news abo...|            [movies]|  Los Angeles|  547|      50|
+|  user7|2025-04-22 12:17:01|Can't believe wha...|  [science, fashion]|       Boston|  625|     202|
+| user69|2025-04-22 12:17:02|What do you think...|[news, environmen...|       Boston|  745|     193|
+| user70|2025-04-22 12:17:02|Learning more abo...|[AI, bigdata, spa...|  Los Angeles|  790|       3|
+| user15|2025-04-22 12:17:02|Breaking news abo...|[music, kafka, da...|     New York|  142|     256|
+| user26|2025-04-22 12:17:02|Breaking news abo...|            [movies]|Washington DC|  621|     108|
+| user74|2025-04-22 12:17:03|Everyone should k...| [ML, movies, spark]|     New York|   34|      52|
+|user100|2025-04-22 12:17:03|Amazing developme...|     [streaming, AI]|       Austin|  834|     100|
+| user80|2025-04-22 12:17:03|Excited to explor...|[science, environ...|     New York|  305|     238|
+| user13|2025-04-22 12:17:04|What do you think...|[movies, kafka, e...|       Denver|  613|      24|
+|  user2|2025-04-22 12:17:04|Can't believe wha...|         [analytics]|       Austin|  136|      52|
+| user32|2025-04-22 12:17:04|Just shared my th...|[tech, programmin...|  Los Angeles|  453|     253|
+| user18|2025-04-22 12:17:04|Here's my take on...|        [sports, AI]|       Boston|   88|     177|
+| user50|2025-04-22 12:17:05|Can't believe wha...|[datascience, AI,...|     New York|  210|     297|
+| user19|2025-04-22 12:17:05|Learning more abo...|[health, datascie...|  Los Angeles|  607|      94|
+| user53|2025-04-22 12:17:06|Can't believe wha...|[sports, news, cl...|San Francisco|  394|     231|
+| user95|2025-04-22 12:17:06|Interesting persp...|              [news]|San Francisco|  166|       9|
++-------+-------------------+--------------------+--------------------+-------------+-----+--------+
+only showing top 20 rows
+
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: reentrant call inside <_io.BufferedReader name=21>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+    ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o17.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+Traceback (most recent call last):
+  File "/Users/mohan/Documents/SEM6/DBT/proj/hashtag-trend-analysis/scripts/spark_streaming_app.py", line 238, in <module>
+    spark.streams.awaitAnyTermination()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 596, in awaitAnyTermination
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+py4j.protocol.Py4JError: An error occurred while calling o74.awaitAnyTermination

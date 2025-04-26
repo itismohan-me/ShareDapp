@@ -1,0 +1,7 @@
+Comparison results:
+Streaming Records: 837
+Batch Records: 837
+Streaming Top Hashtag: fashion
+Batch Top Hashtag: kafka
+Batch Processing Time: 3.45 seconds
+Visualization saved as comparison_results.png
