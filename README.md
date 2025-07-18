@@ -140,14 +140,3 @@ The project generates several outputs:
   ```bash
   kafka_2.13-3.4.0/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic raw-tweets --from-beginning
   ```
-
-## Authors
-
-- [Your Name]
-- [Team Member 2]
-- [Team Member 3]
-- [Team Member 4]
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
